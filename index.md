@@ -1,37 +1,164 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KWACOFOCUS</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo_flex">
+                <a class="navbar_brand" href="#">
+                    <img src="./images/logo_alt.png" alt="logo" class="logo_image">
+                </a>
+                <p class="name">KWACOFOCUS<br>MICROFINANCE<br>BANK LTD</p>
+            </div>
+            <div class="nav_icon" id="nav-toggle"><i class="ri-menu-5-line"></i></div>
+            <div class="nav">
+                <ul class="navbar_nav">
+                    <li class="nav-item">
+                      <a class="nav-link typo active-link1" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link typo" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link typo" href="#contact">Contact Us</a>
+                    </li>
+                
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="pop_down" id="pop_down">
+        <div class="nav2" id="nav2">
+            <ul class="navbar_nav2">
+                <li class="nav_item">
+                  <a class="nav_link typo active-link" href="#home">Home</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav_link typo" href="#about">About Us</a>
+                </li>
+                <li class="nav_item">
+                  <a class="nav_link typo" href="#contact">Contact Us</a>
+                </li>
+            
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <section class="hero" id="home">
+        <div class="hero_flex">
+            <div class="left">
+                <div class="left_container">
+                    <p class="left_para">Embrace Your Dreams of Financial Growth.</p>
+                    <p class="left_para1">We are focused on serving the MSME sector in Ilorin, Kwara State, Nigeria, to increase their contribution to our country's economic growth and prosperity.</p>
+                    <button class="contact"><a href="#contact">Contact Us</a> </button>
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+            <div class="right">
+                <img src="./images/semi_circle.png" class="circle">
+                <div>
+                    <img src="./images/Rectangle.png" class="rectangle">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section1" id="about">
+        <div class="section1_flex">
+            <div class="box1">
+                <p class="about_text">About Us</p>
+                <p class="about_para">Your Future. Our Pride</p>
+                <p class="about_para1">Kwacofocus Microfinance Bank is a unit microfinance bank licensed by the Central Bank of Nigeria (CBN). Its head office is in Ilorin, Kwara State.
+                    Kwacofocus Microfinance Bank Nigeria is committed to its passion of helping to improve the business opportunities of entrepreneurs by availing them of easy access to affordable loans, as well as improve the general financial status of everyone with its deposit accounts. 
+                    </p>
+                <div class="qualities">
+                    <div class="values_header">Our Values</div>
+                    <p class="values">
+                        Management and Staff of Kwacofocus share solid corporate values, particularly transparency, innovation, open communication, performance orientation, integrity, social & environmental responsibility and client protection. <br><br>
+                        Our values help to achieve its objectives to alleviate poverty through lasting solutions that help people build assets, create jobs and raise their standard of living. 
+                    </p>
+                </div>
+                <div class="qualities1">
+                    <div class="vision_header">Our Vision</div>
+                    <p class="vision">
+                        We have a social vision and business orientation that aims to provide individuals, businesses with economic opportunities to transform the quality of their lives.
+                    </p>
+                </div>
+            </div>
+            <div class="box2">
+               
+            </div>
+        </div>
+    </section>
+    <section class="section2" id="contact">
+        <div class="section2_flex">
+            <div class="contact_box1">
+                <div class="texts">
+                    <p class="contact_text">Contact Us</p>
+                    <p class="contact_para">We’d love to<br> hear from you</p>
+                </div>
+            </div>
+            <div class="contact_box2">
+                <form class="myform">
+                    <div class="form_row">
+                      <div class="col">
+                        <label class="design">Email</label><br>
+                        <input type="text" class="form-control distance" id="email" placeholder="Enter email">
+                      </div>
+                      <div class="col">
+                        <label class="design">Phone</label><br>
+                        <input type="tel" class="form-control distance" placeholder="Enter phone number">
+                      </div>
+                    </div>
+                    <div>
+                        <label class="design">Subject</label><br>
+                        <input type="text" class="form-control distance" placeholder="Text...">
+                    </div>
+                    <div>
+                        <label class="design">Message</label><br>
+                        <textarea id="message" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                    <button type="submit" class="submit">Submit</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer_color">
+        <p class="footer_para">© 2021, KwacoFocus MFB Limited. All rights reserved.</p>
+    </footer>
 
-You can use the [editor on GitHub](https://github.com/Emmyinkk/Kwakofocus/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+    <script>
+    const navMenu = document.getElementById('nav2'),
+        navToggle = document.getElementById('nav-toggle')
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    navToggle.addEventListener('click', onClick);
 
-### Markdown
+    function onClick() {
+        if(navMenu.classList.contains('show-menu') === true) {
+            navMenu.classList.remove('show-menu');
+        } else {
+            navMenu.classList.add('show-menu');
+        }
+    };
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    const navLink = document.querySelectorAll('.nav_link')
 
-```markdown
-Syntax highlighted code block
+    function linkAction(){
+        const navMenu = document.getElementById('nav2')
+        navMenu.classList.remove('show-menu')
+    };
+    navLink.forEach(n => n.addEventListener('click', linkAction))
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Emmyinkk/Kwakofocus/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    </script>
+</body>
+</html>
